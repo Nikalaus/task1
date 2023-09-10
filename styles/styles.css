@@ -1,0 +1,92 @@
+/** @format */
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  font-size: 3vh;
+}
+
+.grid {
+  background-color: grey;
+  display: grid;
+  height: 90vh;
+  width: 100vh;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 10% 1fr 20%;
+  grid-template-areas:
+    "header header"
+    "main sidebar"
+    "footer footer";
+}
+
+header {
+  grid-area: header;
+  padding: 10px;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: yellow;
+  padding: 15px;
+}
+
+main {
+  grid-area: main;
+  background-color: yellowgreen;
+  padding: 10px;
+}
+
+footer {
+  grid-area: footer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    ". ."
+    "m1 m2"
+    "m3 m3";
+  grid-gap: 15px;
+}
+
+.m1,
+.m2,
+.m3 {
+  border: 1px dashed rgb(24, 84, 133);
+  background: lightgreen;
+  padding: 1em;
+}
+
+.m1 {
+  grid-area: m1;
+}
+
+.m2 {
+  grid-area: m2;
+}
+
+.m3 {
+  grid-area: m3;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 1em;
+}
+
+.f {
+  border: 1px solid rgb(24, 84, 133);
+  background: whitesmoke;
+  padding: 5px;
+}
+
+p {
+  grid-column: span 2;
+}
