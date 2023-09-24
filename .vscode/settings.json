@@ -21,5 +21,6 @@
     "editor.fontSize": 16,
     "editor.fontVariations": true,
     "editor.fontWeight": "normal",
-    "liveServer.settings.multiRootWorkspaceName": "task2"
+    "liveServer.settings.multiRootWorkspaceName": "task2",
+    "liveServer.settings.port": 5501
 }

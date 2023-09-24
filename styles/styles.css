@@ -10,6 +10,8 @@ body {
   font-size: 3vh;
 }
 
+
+@media screen and (min-width: 600px) {
 .grid {
   background-color: grey;
   display: grid;
@@ -38,10 +40,6 @@ main {
   grid-area: main;
   background-color: yellowgreen;
   padding: 10px;
-}
-
-footer {
-  grid-area: footer;
 }
 
 main {
@@ -74,19 +72,110 @@ main {
   grid-area: m3;
 }
 
+p {
+  grid-column: span 2;
+}
+
 footer {
+  grid-area: footer;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
   padding: 1em;
 }
-
 .f {
   border: 1px solid rgb(24, 84, 133);
   background: whitesmoke;
   padding: 5px;
 }
 
+}
+
+@media screen and (min-width: 400px) and (max-width: 599px) {
+.grid {
+  background-color: grey;
+  display: grid;
+  height: 90vh;
+  width: 100vh;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 10% 1fr 20%;
+  grid-template-areas:
+    "header header"
+    "main sidebar";
+
+}
+
+header {
+  grid-area: header;
+  padding: 10px;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: yellow;
+  padding: 15px;
+}
+
+main {
+  grid-area: main;
+  background-color: yellowgreen;
+  padding: 10px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    ". ."
+    "m1 m2"
+    "m3 m3";
+  grid-gap: 15px;
+}
+
+.m1,
+.m2,
+.m3 {
+  border: 1px dashed rgb(24, 84, 133);
+  background: lightgreen;
+  padding: 1em;
+}
+
+.m1 {
+  grid-area: m1;
+}
+
+.m2 {
+  grid-area: m2;
+}
+
+.m3 {
+  grid-area: m3;
+}
+
 p {
   grid-column: span 2;
+}
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding: 1em;
+
+}
+.f {
+  border: 1px solid rgb(24, 84, 133);
+  background: whitesmoke;
+  padding: 5px;
+}
+  footer {
+  display: none;
+}
+}
+
+@media screen and (max-width: 399px) {
+  footer {
+  display: none;
+}
 }
